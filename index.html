@@ -29,7 +29,7 @@
           <li><a href="#home" data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="700" >Beranda</a></li>
           <li><a href="#about" data-aos="fade-right"data-aos-duration="2000" data-aos-delay="1000" >Tentang</a></li>
           <li><a href="#education" data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="1300" >Pendidikan</a></li>
-          <li><a href="#project"  data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="1600" >Dalam Tahap</a></li>
+          <li><a href="#project"  data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="1600" >Pembelajaran</a></li>
           <li><a href="#contact" data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="2000" >Kontak</a></li>
         </ul>
       </nav>
@@ -136,11 +136,13 @@
     <!-- portfolio section starts  -->
 
     <section class="project" id="project">
-      <h1 class="heading">my <span> project </span></h1>
+      <h1 class="heading">Pem<span>belejaran </span></h1>
 
       <div class="box-container">
         <div class="box">
-          <img src="img/coming soon.gif" alt="" />s
+          <a href="program_sederhana_menggunakan_pointer.html">
+          <img src="img/pointer.png" alt="pointer" />s 
+          </a>
         </div>
 
         <div class="box">
@@ -168,7 +170,8 @@
     <!-- portfolio section ends -->
 
     <!-- contact section starts  -->
-
+    
+  
     <section class="contact" id="contact">
       <h1 class="heading"><span>kontak</span> saya</h1>
 
@@ -182,13 +185,14 @@
             <h3><i class="fas fa-map-marker-alt"></i> Bekasi, 17157</h3>
           </div>
         </div>
+        
+        <form name="contact-form">
+          <input type="text" placeholder="nama" class="box" name="nama" />
+          <input type="email" placeholder="email" class="box" name="email" />
+          <input type="text" placeholder="subjek" class="box" name="subjek" />
+          <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="pesan" name="pesan"></textarea>
+          <button type="submit" class="btn btn-primary btn-kirim" >send <i class="fas fa-paper-plane"></i></button>
 
-        <form action="">
-          <input type="text" placeholder="nama" class="box" />
-          <input type="email" placeholder="email" class="box" />
-          <input type="text" placeholder="subjek" class="box" />
-          <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="pesan"></textarea>
-          <button type="submit" class="btn">send <i class="fas fa-paper-plane"></i></button>
         </form>
       </div>
     </section>
@@ -212,5 +216,17 @@
     <!-- custom js file link  -->
 
     <script src="script.js"></script>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwDienYK3-jhMbIjhbBhTdsYQP1y4dzpZVyAV_tih03FCaBmV1oeFsu95anghAa7MQ/exec'
+  const form = document.forms['contact-form]
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
   </body>
 </html>

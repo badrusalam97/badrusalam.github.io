@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>badru salam</title>
+<link rel="shortcut icon" href="img/favicon-32x32.png">
+    <!-- animasi -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- akhir animasi -->
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>  
+      <!-- header section starts  -->
+
+    <header>
+      <div class="user">
+        <img src="img/pic.jpg" alt="" data-aos="zoom-in" data-aos-duration="2500"/>
+        <h3 class="name"data-aos="fade-down" data-aos-duration="1000">Badru Salam</h3>
+        <p class="post" data-aos="fade-down" data-aos-duration="2000"data-aos-delay="2000">junior Programmer</p>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="700" >Beranda</a></li>
+          <li><a href="about.html" data-aos="fade-right"data-aos-duration="2000" data-aos-delay="1000" >Tentang</a></li>
+          <li><a href="pendidikan.html" data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="1300" >Pendidikan</a></li>
+          <li><a href="pembelajaran.html"  data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="1600" >Pembelajaran</a></li>
+          <li><a href="contact.html" data-aos="fade-right"data-aos-duration="2000"  data-aos-delay="2000" >Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- header section ends -->
+
+    <div id="menu" class="fas fa-bars"></div>
+    <!-- header section starts  -->
+    <section class="about" id="about">
+      <h1 class="heading"><span>Program sederhana menggunakan </span> pointer</h1>
+    <div class="row">
+        <div class="info">
+            <span>bekasi, 24/04/2022</span>
+            <h3>Pointer <span> adalah penunjuk suatu variabel. Karena menunjuk suatu variabel, maka pointer wajib memiliki alamat dari variabel yang ditunjuknya. Terkadang, dalam program yang besar, penghematan memori wajib untuk dilakukan. Dengan mekanisme copy dan paste nilai variabel satu kedalam variabel lain, akan sangat memboroskan memori. Dengan mekanisme pointer, suatu variabel dalam suatu fungsi dapat diakses oleh fungsi yang lain</span></h3>
+            <h3>Contoh Penggunaan Struct </h3>
+             <textarea name="code" rows="3" cols="42" style="background: #111; color: #FFF; border: 2px inset rgb(82, 81, 81); line-height: 1.5em; padding: 0 7px; -moz-border-radius: 5px;"> /* STRUCT */
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+struct tipekoord{
+	int x, y;
+};
+void main(){
+struct tipekoord tA, tB;
+float dist;
+clrscr();
+ </textarea> <BR> <BR><BR>
+ <textarea name="code" rows="3" cols="42" style="background: #111; color: #FFF; border: 2px inset rgb(82, 81, 81); line-height: 1.5em; padding: 0 7px; -moz-border-radius: 5px;">printf("Titik A : \n ");
+printf("Posisi x dan y?");
+scanf("%d %d", &tA.x, &tA.y);
+printf("Titik B : \n ");
+printf("Posisi x dan y?");
+scanf("%d %d", &tB.x, &tB.y);
+dist = sqrt(pow((tA.x - tB.x),2)+pow((tA.y - tB.y),2));
+printf("\n Jarak A dan B = %.2f unit",dist);
+getch();
+}
+ </textarea><br>
+             <h3>pointer <br> <span>- Variabel bertipe data Pointer adalah variable yang isinya berupa alamat (address) dari variable lainnya. <br>
+Contoh:<br>
+     -Int a, b; /* a dan b adalah variable integer*/<br>
+     -Int *pa, *pb; /* pa dan pb adalah variable pointer*/<br><br>
+
+Saat ini isi dari pa dan pb belum ditentukan, dengan assignment berikut: <br>
+	- pa= &a; 	pb = &b; <br>
+Maka pa berisi alamat a, dan pb berisi alamat b.
+
+</span></h3> 
+
+        </div>
+
+
+    <!-- scroll top button  -->
+
+    <a href="#home" class="top">
+      <img src="img/top2.png" alt="" />
+    </a>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- animasi -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- custom js file link  -->
+
+    <script src="script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwDienYK3-jhMbIjhbBhTdsYQP1y4dzpZVyAV_tih03FCaBmV1oeFsu95anghAa7MQ/exec'
+      const form = document.forms['contact-form]
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>

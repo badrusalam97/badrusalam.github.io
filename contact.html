@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>badru salam</title>
+    <link rel="shortcut icon" href="img/favicon-32x32.png" />
+    <!-- animasi -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- akhir animasi -->
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header>
+      <div class="user">
+        <img src="img/pic.jpg" alt="" data-aos="zoom-in" data-aos-duration="2500" />
+        <h3 class="name" data-aos="fade-down" data-aos-duration="1000">Badru Salam</h3>
+        <p class="post" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="2000">junior Programmer</p>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="about.html" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="700">Beranda</a></li>
+          <li><a href="about.html" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000">Tentang</a></li>
+          <li><a href="pendidikan.html" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1300">Pendidikan</a></li>
+          <li><a href="pembelajaran.html" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1600">Pembelajaran</a></li>
+          <li><a href="contact.html" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="2000">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- header section ends -->
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>kontak</span> saya</h1>
+
+      <div class="row">
+        <div class="content">
+          <h3 class="title">kontak info</h3>
+
+          <div class="info">
+            <h3><i class="fas fa-envelope"></i> badru.salam2297@gmail.com</h3>
+            <h3><i class="fas fa-phone"></i> +62812-9895-9113</h3>
+            <h3><i class="fas fa-map-marker-alt"></i> Bekasi, 17157</h3>
+          </div>
+        </div>
+
+        <form name="contact-form">
+          <input type="text" placeholder="nama" class="box" name="nama" />
+          <input type="email" placeholder="email" class="box" name="email" />
+          <input type="text" placeholder="subjek" class="box" name="subjek" />
+          <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="pesan" name="pesan"></textarea>
+          <button type="submit" class="btn btn-primary btn-kirim">send <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- scroll top button  -->
+
+    <a href="#home" class="top">
+      <img src="img/top2.png" alt="" />
+    </a>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- animasi -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- custom js file link  -->
+
+    <script src="script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwDienYK3-jhMbIjhbBhTdsYQP1y4dzpZVyAV_tih03FCaBmV1oeFsu95anghAa7MQ/exec'
+      const form = document.forms['contact-form]
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>

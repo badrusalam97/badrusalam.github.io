@@ -192,6 +192,11 @@ header .navbar ul li a:hover {
   padding-left: 6rem;
 }
 
+.about .row .info span {
+  color: #eee;
+  padding: 0 0.5rem;
+}
+
 .about .row .info h3 {
   font-size: 2rem;
   color: var(--yellow);
